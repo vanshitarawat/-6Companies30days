@@ -1,5 +1,8 @@
 # -6Companies30days
 Q1 Image Smoother
+
+
+
 class Solution {
     public int[][] imageSmoother(int[][] img) {
         int m=img.length;

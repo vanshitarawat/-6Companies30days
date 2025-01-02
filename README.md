@@ -57,3 +57,31 @@ class Solution {
 
     }
 }
+
+
+
+
+
+
+
+
+Q3 Winner of The Game
+class Solution {
+    public int findTheWinner(int n, int k) {
+        ArrayList<Integer>list=new ArrayList<>();
+        for(int i=1;i<=n;i++){
+            list.add(i);
+        }
+       int size= list.size();
+        int index=0;
+        while(size>1){
+       
+        index=((index+(k-1)) %size);
+        list.remove(index);
+        size--;
+
+        }
+        return list.get(0);
+        
+    }
+}

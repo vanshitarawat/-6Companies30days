@@ -85,3 +85,23 @@ class Solution {
         
     }
 }
+
+
+
+
+Q4 Minimum moves to equal array elements 2
+class Solution {
+    public int minMoves2(int[] nums) {
+        Arrays.sort(nums);
+        int n=nums.length;
+        int start_index=0;
+        int end_index=(n-1);
+        int mid=(start_index + end_index)/2;
+        int moves=0;
+        for(int i=0;i<n;i++){
+             moves=moves+Math.abs(nums[i]-nums[mid]);
+        }
+        return moves;
+       
+    }
+}

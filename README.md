@@ -105,3 +105,28 @@ class Solution {
        
     }
 }
+
+
+
+Q5 Delete n nodes after skipping m nodes
+class Solution {
+    static void linkdelete(Node head, int n, int m) {
+       if(head==null){
+           System.out.println("Nothing to delete");
+       }
+       Node current=head;
+        while(current!=null){
+            for(int i=0;i<m && current!=null;i++){
+                current=current.next;
+            }
+            Node temp=current.next;
+            for(int i=0;i<n && temp!=null;i++){
+                temp=temp.next;
+            }
+            current.next=temp;
+            current=temp;
+            
+        }
+        
+    }
+}
